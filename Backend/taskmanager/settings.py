@@ -101,6 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LOGIN_REDIRECT_URL = 'task_list'  # Redirect to the task list page after login
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
