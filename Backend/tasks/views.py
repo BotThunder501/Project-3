@@ -18,6 +18,9 @@ def signup(request):
         form = UserCreationForm()
     return render(request, 'registration/signup.html', {'form': form})
 
+def logout_view(request):
+    return render(request, 'registration/logout.html')
+
 @login_required
 def task_list(request):
     tasks = Task.objects.filter(user=request.user).order_by('due_date')
