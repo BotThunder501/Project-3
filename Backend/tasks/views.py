@@ -23,7 +23,19 @@ def logout_view(request):
 
 @login_required
 def task_list(request):
-    tasks = Task.objects.filter(user=request.user).order_by('due_date')
+    sort = request.GET.get('sort')
+    if sort == 'due_date_asc':
+        tasks = Task.objects.all().order_by('due_date')
+    elif sort == 'due_date_desc':
+        tasks = Task.objects.all().order_by('-due_date')
+    elif sort == 'priority_low':
+        tasks = Task.objects.filter(priority='L')  # Filter for low priority
+    elif sort == 'priority_medium':
+        tasks = Task.objects.filter(priority='M')  # Filter for medium priority
+    elif sort == 'priority_high':
+        tasks = Task.objects.filter(priority='H')  # Filter for high priority
+    else:
+        tasks = Task.objects.all()  # Default order
     return render(request, 'tasks/task_list.html', {'tasks': tasks})
 
 @login_required

@@ -7,11 +7,36 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Due Date</th>
-            <th>Priority</th>
-            <th>Status</th>
-            <th>Actions</th>
+            <th class="col-2 align-middle">Title</th>
+            <th class="col-1 align-middle">
+                Due Date
+                <div class="dropdown d-inline">
+                    <button class="btn btn-link dropdown-toggle" type="button" id="dueDateDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Sort
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dueDateDropdown">
+                        <li><a class="dropdown-item" href="?sort=due_date_asc">Sort Asc</a></li>
+                        <li><a class="dropdown-item" href="?sort=due_date_desc">Sort Desc</a></li>
+                    </ul>
+                </div>
+            </th>
+            <th class="col-1 align-middle">
+                Priority
+                <div class="dropdown d-inline">
+                    <button class="btn btn-link dropdown-toggle" type="button" id="priorityDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Filter
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="priorityDropdown">
+                        <li><a class="dropdown-item" href="?sort=priority_low">Low</a></li>
+                        <li><a class="dropdown-item" href="?sort=priority_medium">Medium</a></li>
+                        <li><a class="dropdown-item" href="?sort=priority_high">High</a></li>
+                    </ul>
+                </div>
+            </th>
+            <th class="col-1 align-middle">Status</th>
+            <th class="col-1 align-middle">Actions</th>
         </tr>
     </thead>
     <tbody>

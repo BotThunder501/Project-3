@@ -4,7 +4,21 @@
 <h1>{% if form.instance.pk %}Edit Task{% else %}Create Task{% endif %}</h1>
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    <div>
+        {{ form.title.label }}: {{ form.title }}
+    </div>
+    <div>
+        {{ form.description.label }}: {{ form.description }}
+    </div>
+    <div>
+        {{ form.due_date.label }}: {{ form.due_date }}
+    </div>
+    <div>
+        {{ form.priority.label }}: {{ form.priority }}
+    </div>
+    <div>
+        {{ form.status.label }}: {{ form.status }}
+    </div>
     <button type="submit" class="btn btn-primary">Save</button>
     <a href="{% url 'task_list' %}" class="btn btn-secondary">Cancel</a>
 </form>
