@@ -1,6 +1,6 @@
 # Task Management App
 
-## Talbe of Contents
+## Table of Contents
 
 - [Features](#features)
   - [Connecting Database](#connecting-the-database)
@@ -17,7 +17,7 @@ The purpose of this project was to design an app that help individual users to m
 
 Below is a wireframe of the concept of the app.
 
-![Wireframe](assests/images/wireframe.png)
+![Wireframe](assets/images/wireframe.png)
 
 ## Features
 
@@ -48,28 +48,28 @@ os.environ.setdefault("DATABASE_URL", "<Your Database URL>")
 
 - **Login**
   - Login page
-  ![Login Page](assests/images/login.png)
+  ![Login Page](assets/images/login.png)
 - **SignUp**
   - Sign up page
-  ![Sign Up Page](assests/images/signup.png)
+  ![Sign Up Page](assets/images/signup.png)
 - **TaskList**
   - View all tasks
-  ![Tasklists](assests/images/tasklists.png)
+  ![Tasklists](assets/images/tasklists.png)
 - **Sort By Due Date**
   - Sort tasks by due date
-  ![Sort By Due Date](assests/images/sortduedate.png)
+  ![Sort By Due Date](assets/images/sortduedate.png)
 - **Filter Priority**
   - Filter tasks by priority
-  ![Filter Priority](assests/images/filterpriority.png)
+  ![Filter Priority](assets/images/filterpriority.png)
 - **Create Tasks**
   - Add new tasks
-  ![Create Tasks](assests/images/createtasks.png)
+  ![Create Tasks](assets/images/createtasks.png)
 - **Edit Tasks**
   - Edit existing tasks
-  ![Edit Tasks](assests/images/edittasks.png)
+  ![Edit Tasks](assets/images/edittasks.png)
 - **Logout**
   - Logout page
-  ![Logout Page](assests/images/logout.png)
+  ![Logout Page](assets/images/logout.png)
 
 ### Features left to implement
 
@@ -85,7 +85,7 @@ os.environ.setdefault("DATABASE_URL", "<Your Database URL>")
 
 Two forms of testing were done, manual and automated testing. Manual testing was done by the developer to ensure that the application works as expected. Automated testing was done using the unittest library in python to ensure that the application works as expected. 
 
-The manual tests that were done was to check that the visual/gui of the application works as expected, that the application can be logged in and out, can be used to create, edit and delete tasks, sort and filter tasks, to view all tasks, to view all tasks sorted by due date. Each button were tested to ensure that it works as expected. 
+The manual tests that were done was to check that the visual/gui of the application works as expected, that the application can be logged in and out, can be used to create, edit and delete tasks, sort and filter tasks, to view all tasks, to view all tasks sorted by due date. Each button was tested to ensure that it works as expected. 
 
 The automated tests created were to check each of the functions in the application to ensure that they work as expected. The model, view and form files have test cases each to check that they work as expected. Below is the code for the automated tests. The code can also be found in tasks/test.py.
 
@@ -182,7 +182,7 @@ class TaskFormTest(TestCase):
 
 - Lighthouse
   - Overall performance of website is great.
-  ![Lighthouse](assests/images/lighthouse.png)
+  ![Lighthouse](assets/images/lighthouse.png)
 
 ### User Stories
 
@@ -197,7 +197,7 @@ The app was deployed on Heroku. The deployment process was done manually. The st
 5. Ensure both the secret key and database URL are not in the settings file.
 6. In settings.py file change debug to false.
 7. In settings.py file in allowed host add '.herokuapp.com'
-8. Add a file called runtime.txt and add lastest version of python to it.
+8. Add a file called runtime.txt and add latest version of python to it.
 9. Install gunicorn (add whitenoise if you have static files)
 10. Create a Procfile and add the following: web: gunicorn taskmanager.wsgi:application
 11. Create a requirements.txt file `using pip freeze > requirements.txt` in the terminal.
@@ -212,4 +212,4 @@ Here is a link to the deployed website [Task Management App](https://task-manage
 ### Content
 
 - Instructions on how to use the django, bootstrap, postgressql and react were taken from [W3Schools](https://www.w3schools.com/)
-- A guide on how to build a task manangement app were taken form [Geeks for Geeks](https://www.geeksforgeeks.org/create-task-management-system-using-django/)
+- A guide on how to build a task management app were taken form [Geeks for Geeks](https://www.geeksforgeeks.org/create-task-management-system-using-django/)
